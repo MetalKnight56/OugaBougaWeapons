@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "ougabougaweapons:item/rock_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "ougabougaweapons:item/rock_2d"
+    },
+    "ground": {
+      "parent": "ougabougaweapons:item/rock_2d"
+    },
+    "fixed": {
+      "parent": "ougabougaweapons:item/rock_2d"
+    }
+  }
+}

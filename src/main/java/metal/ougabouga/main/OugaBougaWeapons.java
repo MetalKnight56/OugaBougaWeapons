@@ -2,6 +2,7 @@ package metal.ougabouga.main;
 
 import com.mojang.logging.LogUtils;
 
+import metal.ougabouga.world.item.OugaBougaCreativeModeTabs;
 import metal.ougabouga.world.item.OugaBougaItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -25,10 +26,9 @@ public class OugaBougaWeapons {
     public OugaBougaWeapons() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         
+        OugaBougaCreativeModeTabs.register(modEventBus);
         
         OugaBougaItems.register(modEventBus);
-        
-        
 
         modEventBus.addListener(this::commonSetup);
 
@@ -42,7 +42,7 @@ public class OugaBougaWeapons {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-    	if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+    	if (event.getTabKey() == CreativeModeTabs.COMBAT) {
     		event.accept(OugaBougaItems.CLUB);
     	}
     }
