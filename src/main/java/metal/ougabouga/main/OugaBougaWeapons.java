@@ -2,11 +2,11 @@ package metal.ougabouga.main;
 
 import com.mojang.logging.LogUtils;
 
+import metal.ougabouga.client.renderer.entity.RockProjectileRenderer;
 import metal.ougabouga.world.entity.OugaBougaEntities;
 import metal.ougabouga.world.item.OugaBougaCreativeModeTabs;
 import metal.ougabouga.world.item.OugaBougaItems;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -62,7 +62,7 @@ public class OugaBougaWeapons {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
         	
-        	EntityRenderers.register(OugaBougaEntities.ROCK_PROJECTILE.get(), ThrownItemRenderer::new);
+        	EntityRenderers.register(OugaBougaEntities.ROCK_PROJECTILE.get(), RockProjectileRenderer::new);
 
         }
     }

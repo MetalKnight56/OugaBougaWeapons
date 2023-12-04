@@ -37,5 +37,4 @@ public class RockProjectileEntity extends ThrowableItemProjectile {
 		
 		super.onHitBlock(pResult);
 	}
-	
 }
