@@ -14,7 +14,7 @@ public class OugaBougaItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, OugaBougaWeapons.MOD_ID);
     
     public static final RegistryObject<Item> CLUB = ITEMS.register("club", () ->  new ClubItem(Tiers.WOOD, 1, -2.6f, new Item.Properties().durability(200)));
-    public static final RegistryObject<Item> ROCK = ITEMS.register("rock", () ->  new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ROCK = ITEMS.register("rock", () ->  new RockItem(new Item.Properties()));
     
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
