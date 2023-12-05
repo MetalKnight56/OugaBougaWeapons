@@ -22,8 +22,11 @@ public class RockProjectileRenderer extends EntityRenderer<RockProjectileEntity>
     @Override
     public void render(RockProjectileEntity entity, float entityYaw, float partialTicks, PoseStack matrixStack,
                        MultiBufferSource buffer, int packedLight) {
-        this.model.renderToBuffer(matrixStack, buffer.getBuffer(this.model.renderType()), packedLight, OverlayTexture.NO_OVERLAY,
+    	this.model.setupAnim(entity, 0, 0, entity.tickCount, 0, 0);
+    	
+        this.model.renderToBuffer(matrixStack, buffer.getBuffer(this.model.renderType(getTextureLocation(entity))), packedLight, OverlayTexture.NO_OVERLAY,
                 1.0F, 1.0F, 1.0F, 1.0F);
+       
         super.render(entity, entityYaw, partialTicks, matrixStack, buffer, packedLight);
     }
 
@@ -31,7 +34,7 @@ public class RockProjectileRenderer extends EntityRenderer<RockProjectileEntity>
 
     @Override
     public ResourceLocation getTextureLocation(RockProjectileEntity entity) {
-        return new ResourceLocation("ougabougaweapons", "textures/item/rock_3d");
+        return new ResourceLocation("ougabougaweapons", "textures/item/rock_3d.png");
     }
 }
 
