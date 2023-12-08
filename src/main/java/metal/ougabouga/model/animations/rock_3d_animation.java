@@ -16,14 +16,14 @@ public class rock_3d_animation {
 	public static final AnimationDefinition THROW = AnimationDefinition.Builder.withLength(9.0F).looping()
 			.addAnimation("bone", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
 					new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
-					new Keyframe(0.0F, KeyframeAnimations.degreeVec(45.0F, 0.0F, 45.0F), AnimationChannel.Interpolations.LINEAR),
-					new Keyframe(1.0F, KeyframeAnimations.degreeVec(90.0F, 0.0F, 90.0F), AnimationChannel.Interpolations.LINEAR),
-					new Keyframe(2.0F, KeyframeAnimations.degreeVec(135.0F, 0.0F, 135.0F), AnimationChannel.Interpolations.LINEAR),
-					new Keyframe(4.0F, KeyframeAnimations.degreeVec(180.0F, 0.0F, 180.0F), AnimationChannel.Interpolations.LINEAR),
-					new Keyframe(6.0F, KeyframeAnimations.degreeVec(225.0F, 0.0F, 225.0F), AnimationChannel.Interpolations.LINEAR),
-					new Keyframe(7.5F, KeyframeAnimations.degreeVec(270.0F, 0.0F, 270.0F), AnimationChannel.Interpolations.CATMULLROM),
-					new Keyframe(8.0F, KeyframeAnimations.degreeVec(315.0F, 0.0F, 315.0F), AnimationChannel.Interpolations.LINEAR),
-					new Keyframe(9.0F, KeyframeAnimations.degreeVec(360.0F, 0.0F, 360.0F), AnimationChannel.Interpolations.LINEAR)
+					new Keyframe(10.0F, KeyframeAnimations.degreeVec(45.0F, 0.0F, 45.0F), AnimationChannel.Interpolations.LINEAR),
+					new Keyframe(20.0F, KeyframeAnimations.degreeVec(90.0F, 0.0F, 90.0F), AnimationChannel.Interpolations.LINEAR),
+					new Keyframe(30.0F, KeyframeAnimations.degreeVec(135.0F, 0.0F, 135.0F), AnimationChannel.Interpolations.LINEAR),
+					new Keyframe(40.0F, KeyframeAnimations.degreeVec(180.0F, 0.0F, 180.0F), AnimationChannel.Interpolations.LINEAR),
+					new Keyframe(50.0F, KeyframeAnimations.degreeVec(225.0F, 0.0F, 225.0F), AnimationChannel.Interpolations.LINEAR),
+					new Keyframe(60.5F, KeyframeAnimations.degreeVec(270.0F, 0.0F, 270.0F), AnimationChannel.Interpolations.CATMULLROM),
+					new Keyframe(70.0F, KeyframeAnimations.degreeVec(315.0F, 0.0F, 315.0F), AnimationChannel.Interpolations.LINEAR),
+					new Keyframe(80.0F, KeyframeAnimations.degreeVec(360.0F, 0.0F, 360.0F), AnimationChannel.Interpolations.LINEAR)
 		))
 		.build();
 }

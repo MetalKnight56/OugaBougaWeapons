@@ -20,6 +20,7 @@ public class OugaBougaCreativeModeTabs {
 			.title(Component.translatable("creativetab.ougabouga_tab"))
 			.displayItems((pParameters, pOutput) -> {
 				pOutput.accept(OugaBougaItems.CLUB.get());
+				pOutput.accept(OugaBougaItems.STICK_LONG.get());
 				pOutput.accept(OugaBougaItems.ROCK.get());
 			})
 			.withBackgroundLocation(new ResourceLocation(OugaBougaWeapons.MOD_ID, "textures/gui/ougabouga_tab.png"))
