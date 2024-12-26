@@ -1,12 +1,19 @@
 package metal.ougabouga.main;
 
+import org.slf4j.Logger;
+
 import com.mojang.logging.LogUtils;
 
 import metal.ougabouga.client.renderer.entity.RockProjectileRenderer;
+import metal.ougabouga.client.renderer.entity.StickLongEntityRenderer;
+import metal.ougabouga.client.renderer.item.OugaBougaItemProperties;
 import metal.ougabouga.world.entity.OugaBougaEntities;
 import metal.ougabouga.world.item.OugaBougaCreativeModeTabs;
 import metal.ougabouga.world.item.OugaBougaItems;
+import metal.ougabouga.world.item.StickLongItem;
+import metal.ougabouga.world.item.crafting.OugaBougaRecipes;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -18,7 +25,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(OugaBougaWeapons.MOD_ID)
@@ -32,7 +38,8 @@ public class OugaBougaWeapons {
         OugaBougaCreativeModeTabs.register(modEventBus);
         OugaBougaItems.register(modEventBus);
         OugaBougaEntities.register(modEventBus);
-
+        OugaBougaRecipes.register(modEventBus);
+        
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -63,7 +70,11 @@ public class OugaBougaWeapons {
         public static void onClientSetup(FMLClientSetupEvent event) {
         	
         	EntityRenderers.register(OugaBougaEntities.ROCK_PROJECTILE.get(), RockProjectileRenderer::new);
+        	ItemProperties.register(OugaBougaItems.STICK_LONG.get(), StickLongItem.THROWING_PREDICATE,
+                    (stack, level, entity, seed) -> entity != null && entity.isUsingItem() && entity.getUseItem() == stack ? 1.0F : 0.0F);
 
+        	//Register item properties
+        	OugaBougaItemProperties.registerProperties();
         }
     }
 }

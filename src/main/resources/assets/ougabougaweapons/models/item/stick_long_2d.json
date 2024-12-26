@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "ougabougaweapons:item/stick_long_2d_layer0",
-    "layer1": "ougabougaweapons:item/stick_long_2d_layer1"
-  }
-}

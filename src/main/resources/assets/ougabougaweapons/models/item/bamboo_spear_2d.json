@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "ougabougaweapons:item/bamboo_spear_2d"
+  }
+}

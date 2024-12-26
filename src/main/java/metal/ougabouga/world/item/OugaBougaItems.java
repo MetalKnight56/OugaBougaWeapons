@@ -16,6 +16,7 @@ public class OugaBougaItems {
     public static final RegistryObject<Item> CLUB = ITEMS.register("club", () ->  new ClubItem(Tiers.WOOD, 1, -2.6f, new Item.Properties().durability(200)));
     public static final RegistryObject<Item> ROCK = ITEMS.register("rock", () ->  new RockItem(new Item.Properties() .stacksTo(1)));
     public static final RegistryObject<Item> STICK_LONG = ITEMS.register("stick_long", () ->  new StickLongItem(new Item.Properties().durability(150)));
+    public static final RegistryObject<Item> BAMBOO_SPEAR = ITEMS.register("bamboo_spear", () ->  new StickLongItem(new Item.Properties().durability(150)));
     
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
