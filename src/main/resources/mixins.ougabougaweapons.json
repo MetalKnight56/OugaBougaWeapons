@@ -1,0 +1,16 @@
+{
+	"required": true,
+	"minVersion": "0.8",
+	"compatibilityLevel": "JAVA_17",
+	"package": "metal.ougabouga.mixin",
+	"client": [
+	],
+	"mixins": [
+		"MixinCampfireBlock",
+		"MixinCampfireBlockEntity"
+	],
+	"injector": {
+		"defaultRequire": 1
+	},
+	"refmap": "mixins.ougabougaweapons.refmap.json"
+}
