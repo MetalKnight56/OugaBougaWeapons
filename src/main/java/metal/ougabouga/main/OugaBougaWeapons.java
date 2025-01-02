@@ -4,14 +4,18 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
+import metal.ougabouga.client.gui.screens.inventory.BasketContainerScreen;
 import metal.ougabouga.client.renderer.entity.RockProjectileRenderer;
-import metal.ougabouga.client.renderer.entity.StickLongEntityRenderer;
 import metal.ougabouga.client.renderer.item.OugaBougaItemProperties;
+import metal.ougabouga.world.block.OugaBougaBlocks;
+import metal.ougabouga.world.block.entity.OugaBougaBlockEntities;
 import metal.ougabouga.world.entity.OugaBougaEntities;
+import metal.ougabouga.world.inventory.OugaBougaMenuTypes;
 import metal.ougabouga.world.item.OugaBougaCreativeModeTabs;
 import metal.ougabouga.world.item.OugaBougaItems;
 import metal.ougabouga.world.item.StickLongItem;
 import metal.ougabouga.world.item.crafting.OugaBougaRecipes;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -36,9 +40,12 @@ public class OugaBougaWeapons {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         
         OugaBougaCreativeModeTabs.register(modEventBus);
+        OugaBougaBlocks.register(modEventBus);
         OugaBougaItems.register(modEventBus);
+        OugaBougaBlockEntities.register(modEventBus);
         OugaBougaEntities.register(modEventBus);
         OugaBougaRecipes.register(modEventBus);
+        OugaBougaMenuTypes.register(modEventBus);
         
         modEventBus.addListener(this::commonSetup);
 
@@ -75,6 +82,7 @@ public class OugaBougaWeapons {
 
         	//Register item properties
         	OugaBougaItemProperties.registerProperties();
+        	MenuScreens.register(OugaBougaMenuTypes.BASKET.get(), BasketContainerScreen::new);
         }
     }
 }
