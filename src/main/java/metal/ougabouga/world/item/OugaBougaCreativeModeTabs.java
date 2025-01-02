@@ -22,6 +22,7 @@ public class OugaBougaCreativeModeTabs {
 				pOutput.accept(OugaBougaItems.CLUB.get());
 				pOutput.accept(OugaBougaItems.STICK_LONG.get());
 				pOutput.accept(OugaBougaItems.ROCK.get());
+				pOutput.accept(OugaBougaItems.BASKET.get());
 			})
 			.withBackgroundLocation(new ResourceLocation(OugaBougaWeapons.MOD_ID, "textures/gui/ougabouga_tab.png"))
 			.build());

@@ -1,7 +1,8 @@
 package metal.ougabouga.world.item;
 
 import metal.ougabouga.main.OugaBougaWeapons;
-
+import metal.ougabouga.world.block.OugaBougaBlocks;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tiers;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -17,6 +18,7 @@ public class OugaBougaItems {
     public static final RegistryObject<Item> ROCK = ITEMS.register("rock", () ->  new RockItem(new Item.Properties() .stacksTo(1)));
     public static final RegistryObject<Item> STICK_LONG = ITEMS.register("stick_long", () ->  new StickLongItem(new Item.Properties().durability(150)));
     public static final RegistryObject<Item> BAMBOO_SPEAR = ITEMS.register("bamboo_spear", () ->  new StickLongItem(new Item.Properties().durability(150)));
+    public static final RegistryObject<Item> BASKET = ITEMS.register("basket", () ->  new BlockItem(OugaBougaBlocks.BASKET.get(), new Item.Properties()));
     
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
